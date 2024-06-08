@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "22b8053c-cbea-431f-b7f7-b46447147cb9",
+		"name": "dideban",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30601279"
+	},
+	"item": [
+		{
+			"name": "getAllGroups",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://80.210.21.35/getAllGroups.php",
+					"protocol": "http",
+					"host": [
+						"80",
+						"210",
+						"21",
+						"35"
+					],
+					"path": [
+						"getAllGroups.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDeviceLocation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "deviceName",
+							"value": " محمد پور نصیری 21ث677 ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://80.210.21.35/getDeviceLocation.php",
+					"protocol": "http",
+					"host": [
+						"80",
+						"210",
+						"21",
+						"35"
+					],
+					"path": [
+						"getDeviceLocation.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUserDevices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://80.210.21.35/getAllUserDevices.php",
+					"protocol": "http",
+					"host": [
+						"80",
+						"210",
+						"21",
+						"35"
+					],
+					"path": [
+						"getAllUserDevices.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTrackingPoints",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "deviceName",
+							"value": "336حسن فریدونی 82ع",
+							"type": "text"
+						},
+						{
+							"key": "startDateTime",
+							"value": "2024-05-16 08:41",
+							"type": "text"
+						},
+						{
+							"key": "endDateTime",
+							"value": "2024-05-16 15:41",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://80.210.21.35/getTrackingPoints.php",
+					"protocol": "http",
+					"host": [
+						"80",
+						"210",
+						"21",
+						"35"
+					],
+					"path": [
+						"getTrackingPoints.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userAuthenticate",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "basic",
+						"value": "test:test",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://80.210.21.35:8082/api/session",
+					"protocol": "http",
+					"host": [
+						"80",
+						"210",
+						"21",
+						"35"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"session"
+					],
+					"query": [
+						{
+							"key": "basic",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
